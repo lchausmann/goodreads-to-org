@@ -1,0 +1,80 @@
+#+TITLE: Goodreads CSV to Org Mode file
+
+* Usage
+
+Steps:
+1. Exporter you library
+2. Run this tool
+3. Open file in emacs
+
+
+It can be run like this:
+
+#+BEGIN_SRC bash
+go run main.go goodreads_library_export.csv > books.org
+#+END_SRC
+
+This will produced output like this:
+
+#+BEGIN_EXAMPLE
+2020/12/15 11:21:29 Starting importer
+2020/12/15 11:21:29 Parsing complete - 315 books on 3 shelves
+#+END_EXAMPLE
+
+The output looks like this:
+
+#+BEGIN_EXAMPLE
+#+TITLE: Books from Goodreads
+#+COMMENT: Imported by goodreads-to-org
+
+*  CURRENTLY-READING
+** INPROGRESS Extreme Ownership: How U.S. Navy SEALs Lead and Win by Jocko Willink
+:PROPERTIES:
+:Title: Extreme Ownership: How U.S. Navy SEALs Lead and Win
+:Author: Jocko Willink
+:ISBN13: 9781250067050
+:ISBN: 1250067057
+:Publisher: St. Martin's Press
+:Pages: 320
+:FirstPublish: 2015
+:Published: 2015
+:Added: 2020/06/11
+:END:
+** INPROGRESS Dune Messiah by Frank Herbert
+:PROPERTIES:
+:Title: Dune Messiah
+:Author: Frank Herbert
+:Series: Dune
+:Series#: 2
+:Publisher: Ace
+:Pages: 350
+:FirstPublish: 1969
+:Published: 2008
+:Added: 2015/07/24
+:END:
+*  TO-READ
+** TODO War Dogs by Greg Bear
+:PROPERTIES:
+:Title: War Dogs
+:Author: Greg Bear
+:Series: War Dogs
+:Series#: 1
+:Publisher: Gollancz
+:Pages: 297
+:FirstPublish: 2014
+:Published: 2014
+:Added: 2020/06/11
+:END:
+* READ
+** DONE The Power of Habit: Why We Do What We Do and How to Change by Charles Duhigg
+:PROPERTIES:
+:Title: The Power of Habit: Why We Do What We Do and How to Change
+:Author: Charles Duhigg
+:Publisher: Cornerstone Digital
+:Pages: 402
+:FirstPublish: 2012
+:Published: 2012
+:Added: 2015/12/27
+:END:
+
+#+END_EXAMPLE
